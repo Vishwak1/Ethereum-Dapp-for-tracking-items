@@ -1,24 +1,12 @@
-# Project Writeup
 
-## Problem 
 
-Consumers are increasingly concerned about the origin of the products they consume, especially when it comes to food and drink.
-However in todays globalised world many products follow an increasingly complex and international supply chain making it hard to
-track their origin. 
-This is especially true for coffee. Consumers cannot be sure where the coffee was sourced from and how it was processed.
-The problem here is that many different actors are involved in the supply chain who do not share their data such as farmers and distributors.
 
-## Solution
-We can use the blockchain to provide a reliable way for consumers to track the supply chain of their product and for actors along that supply chain to reliably share information.
 
-### Architecture
-The core of our architecture is a `SupplyChain` smart contract that keeps track of the state of a given item / product and allows the current actor in any given stage
-to update the state of the product. When an actor (e.g. a Farmer) completes a certain stage in the supply chain (e.g. Harvesting) he/she updates the data for this product with the additional data generated in the given step and advances it to the next stage.
-To make sure that at any given stage of the supply chain only the actor responsible for the product at this stage can update it, we use an Access Control mechanism with one smart contract managing each role (e.g. `FarmerRole`). This way we can be sure that when we retrieve information for a product in a given stage (e.g. the farm where it was harvested) we can be sure that this information came from the authorized party, making it fraud-proof.
 
-### Conclusion
-Smart Contracts are the ideal tool for managing supply chain information securely and achieving fraud-proof consensus / transparency between stakeholders that otherwise
-would not trust each other. However the main challenge in doing this is having a secure system of Access Control to manage permissions for the different actors / stakeholders.
+
+# Supply chain & data auditing
+
+This repository containts an Ethereum DApp that demonstrates a Supply Chain flow between a Seller and Buyer. The user story is similar to any commonly used supply chain process. A Seller can add items to the inventory system stored in the blockchain. A Buyer can purchase such items from the inventory system. Additionally a Seller can mark an item as Shipped, and similarly a Buyer can mark an item as Received.
 
 ## General Implementation Data
 
@@ -58,8 +46,112 @@ Below are the UML graphs that I created using Lucid Chart. You can find png / xm
 ### Class
 ![Class-Diagram](UMLdocuments/ClassDiagram.png)
 
+The DApp User Interface when running should look like...
+
+![truffle test](images/ftc_product_overview.png)
+
+![truffle test](images/ftc_farm_details.png)
+
+![truffle test](images/ftc_product_details.png)
+
+![truffle test](images/ftc_transaction_history.png)
 
 
+## Getting Started
+
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+
+### Prerequisites
+
+Please make sure you've already installed ganache-cli, Truffle and enabled MetaMask extension in your browser.
+
+```
+Give examples (to be clarified)
+```
+
+### Installing
+
+A step by step series of examples that tell you have to get a development env running
+
+Clone this repository:
+
+```
+git clone https://github.com/udacity/nd1309/tree/master/course-5/project-6
+```
+
+Change directory to ```project-6``` folder and install all requisite npm packages (as listed in ```package.json```):
+
+```
+cd project-6
+npm install
+```
+
+Launch Ganache:
+
+```
+ganache-cli -m "spirit supply whale amount human item harsh scare congress discover talent hamster"
+```
+
+Your terminal should look something like this:
+
+![truffle test](images/ganache-cli.png)
+
+In a separate terminal window, Compile smart contracts:
+
+```
+truffle compile
+```
+
+Your terminal should look something like this:
+
+![truffle test](images/truffle_compile.png)
+
+This will create the smart contract artifacts in folder ```build\contracts```.
+
+Migrate smart contracts to the locally running blockchain, ganache-cli:
+
+```
+truffle migrate
+```
+
+Your terminal should look something like this:
+
+![truffle test](images/truffle_migrate.png)
+
+Test smart contracts:
+
+```
+truffle test
+```
+
+All 10 tests should pass.
+
+![truffle test](images/truffle_test.png)
+
+In a separate terminal window, launch the DApp:
+
+```
+npm run dev
+```
+
+## Built With
+
+* [Ethereum](https://www.ethereum.org/) - Ethereum is a decentralized platform that runs smart contracts
+* [IPFS](https://ipfs.io/) - IPFS is the Distributed Web | A peer-to-peer hypermedia protocol
+to make the web faster, safer, and more open.
+* [Truffle Framework](http://truffleframework.com/) - Truffle is the most popular development framework for Ethereum with a mission to make your life a whole lot easier.
+
+
+## Authors
+
+See also the list of [contributors](https://github.com/your/project/contributors.md) who participated in this project.
+
+## Acknowledgments
+
+* Solidity
+* Ganache-cli
+* Truffle
+* IPFS
 
 
 
