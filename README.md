@@ -41,12 +41,12 @@ web3: ^0.20.6
  
 
 ## Project Writeup
--Roles libraries used for creation and deletion of users
--Truffle is used for the development of the smart contracts and testing of the smart contracts...
--Solidity is the language used to develop the smart contracts...
--Node is used for the development purposes and to install the dependencies required for the project
--web3 is library  used to connect with ethereum  blockchain
--@truffle/hdwallet-provider to sign transactions for addresses.
+Roles libraries used for creation and deletion of users
+Truffle is used for the development of the smart contracts and testing of the smart contracts...
+Solidity is the language used to develop the smart contracts...
+Node is used for the development purposes and to install the dependencies required for the project
+web3 is library  used to connect with ethereum  blockchain
+@truffle/hdwallet-provider to sign transactions for addresses.
 
 ## IPFS
 I did not use IPFS for this project.
