@@ -14,6 +14,9 @@ This repository containts an Ethereum DApp that demonstrates a Supply Chain flow
 Rinkeby-Contract-Address: [0x753D2d1b92a52D8EDE565Da1fFe62B1E23a89121](https://rinkeby.etherscan.io/address/0x753d2d1b92a52d8ede565da1ffe62b1e23a89121)
 And The Account address which created it is 0x1E906eebc627e4c49104d4b36A842bBF8Db09a7d
 
+
+The contract creation Hash is 0xc9e9fb00c0446868b760b41ebe04825c26fa362a9d49a465d66fd9369f83ed42
+
 ### Steps / Setup
 
 I have to thank especially Christian Koopmann(https://github.com/ckoopmann) for his front end code and the changes which are mentioned below
@@ -27,9 +30,23 @@ With the above changes I was able to run the app wiht `npm run dev` and call all
 
 ### Versions
 Truffle v5.3.10 (core: 5.3.10)
+
+
 Solidity v0.5.16 (solc-js)
+
 Node v14.17.1
+
+
 web3: ^0.20.6
+ 
+
+## Project Writeup
+-Roles libraries used for creation and deletion of users
+-Truffle is used for the development of the smart contracts and testing of the smart contracts...
+-Solidity is the language used to develop the smart contracts...
+-Node is used for the development purposes and to install the dependencies required for the project
+-web3 is library  used to connect with ethereum  blockchain
+-@truffle/hdwallet-provider to sign transactions for addresses.
 
 ## IPFS
 I did not use IPFS for this project.
